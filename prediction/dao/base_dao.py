@@ -17,11 +17,11 @@ class BaseDao():
         os.chdir(path)
         for file in os.listdir():
             if file.endswith(".csv"):
-                file_path = f"{path}\{file}"
+                file_path = f"{path}/{file}"
             elif file.endswith(".xls"):
-                file_path = f"{path}\{file}"
+                file_path = f"{path}/{file}"
             elif file.endswith(".xlsx"):
-                file_path = f"{path}\{file}"
+                file_path = f"{path}/{file}"
         file = pd.read_csv(file_path)
         return file
 
